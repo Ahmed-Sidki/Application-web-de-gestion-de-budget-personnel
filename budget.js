@@ -1,5 +1,4 @@
-
-const balanceEl = document.querySelector(".balance .value");
+const balanceEl = document.querySelector(".value");
 const incomeTotalEl = document.querySelector(".income-total");
 const outcomeTotalEl = document.querySelector(".outcome-total");
 const incomeEl = document.querySelector("#income");
@@ -18,7 +17,7 @@ const addIncome = document.querySelector(".add-income");
 const incomeTitle = document.getElementById("income-title-input");
 const incomeAmount = document.getElementById("income-amount-input");
 
-let ENTRY_LIST;
+let ENTRY_LIST = [];
 let balance = 0, income = 0, outcome = 0;
 const DELETE = "delete", EDIT = "edit";
 
@@ -46,6 +45,7 @@ allBtn.addEventListener("click", function(){
 
 addExpense.addEventListener("click", function(){
     if(!expenseTitle.value || !expenseAmount.value ) return;
+
     let expense = {
         type : "expense",
         title : expenseTitle.value,
@@ -59,6 +59,7 @@ addExpense.addEventListener("click", function(){
 
 addIncome.addEventListener("click", function(){
     if(!incomeTitle.value || !incomeAmount.value ) return;
+
     let income = {
         type : "income",
         title : incomeTitle.value,
@@ -73,6 +74,7 @@ addIncome.addEventListener("click", function(){
 incomeList.addEventListener("click", deleteOrEdit);
 expenseList.addEventListener("click", deleteOrEdit);
 allList.addEventListener("click", deleteOrEdit);
+
 
 function deleteOrEdit(event){
     const targetBtn = event.target;
@@ -111,9 +113,7 @@ function updateUI(){
     income = calculateTotal("income", ENTRY_LIST);
     outcome = calculateTotal("expense", ENTRY_LIST);
     balance = Math.abs(calculateBalance(income, outcome));
-
     let sign = (income >= outcome) ? "$" : "-$";
-
     balanceEl.innerHTML = `<small>${sign}</small>${balance}`;
     outcomeTotalEl.innerHTML = `<small>$</small>${outcome}`;
     incomeTotalEl.innerHTML = `<small>$</small>${income}`;
@@ -174,6 +174,7 @@ function clearInput(inputs){
         input.value = "";
     })
 }
+
 function show(element){
     element.classList.remove("hide");
 }
@@ -193,3 +194,4 @@ function inactive( elements ){
         element.classList.remove("active");
     })
 }
+

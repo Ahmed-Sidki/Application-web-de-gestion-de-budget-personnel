@@ -1,3 +1,16 @@
+@font-face {
+    font-family: 'Gilroy';
+    src: url('font/Gilroy-Regular.woff') format('woff');
+    font-weight: bold;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Gilroy Bold';
+    src: url('font/Gilroy-Bold.woff') format('woff');
+    font-weight: bold;
+    font-style: normal;
+}
+
 body{
     background-color: #222;
     font-family: 'Gilroy';
@@ -24,12 +37,12 @@ input[type=number] {
 
 .budget-container{
     position: absolute;
-    width: 360px;
+    width: 600px;
     height: 780px;
     top: 50%;
     left: 50%;
     transform: translateX(-50%) translateY(-50%);
-    background-color: #0abbb2;
+    background-color: #3437ee;
 }
 
 .budget-container .app-title{
@@ -44,7 +57,8 @@ input[type=number] {
     font-family: 'Gilroy Bold';
 }
 
-.budget-header .balance{
+
+.budget-header .balance {
     margin-top: 45px;
     margin-left: 20px;
 }
@@ -64,14 +78,14 @@ input[type=number] {
 
 .budget-header .account{
     display: block;
-    width: 310px;
+    width: 600px;
     margin: 35px auto 0;
     line-height: 1.7em;
     text-align: center;
     
 }
 
-.budget-header .account .income, .chart, .outcome{
+.budget-header .account .income, .chart, .outcome, .dollar, .wallet{
     height: 50px;
     display: inline-block;
     width: 100px;
@@ -98,7 +112,7 @@ input[type=number] {
 
 .budget-dashboard{
     display: block;
-    width: 360px;
+    width: 600px;
     height: 470px;
     background-color: #FFF;
     margin-top: 35px;
@@ -149,12 +163,12 @@ input[type=number] {
 }
 
 .budget-dashboard #all{
-    width: 360px;
+    width: 600px;
     height: 339px;
     position: relative;
 }
 .budget-dashboard #all ul{
-    width: 360px;
+    width: 600px;
     height: 285px;
     list-style: none;
     margin: 0;
@@ -203,7 +217,7 @@ input[type=number] {
 }
 
 .budget-dashboard #expense{
-    width: 360px;
+    width: 600px;
     height: 339px;
     position: relative;
 }
@@ -211,7 +225,7 @@ input[type=number] {
 .budget-dashboard #expense .input{
     position: absolute;
     display: block;
-    width: 360px;
+    width: 600px;
     bottom: 0;
     border-top: 1px solid #ccc;
 }
@@ -223,7 +237,7 @@ input[type=number] {
 
 .budget-dashboard #expense .input input#expense-title-input{
     height: 40px;
-    width : 150px;
+    width : 400px;
     padding-left: 10px;
     font-size: 1.2em;
     font-family: 'Gilroy';
@@ -245,6 +259,18 @@ input[type=number] {
     border: none;
 }
 
+.dollar img{
+    width: 100px;
+    height: 60px;
+    cursor: pointer;
+}
+
+.wallet img{
+    width: 100px;
+    height: 60px;
+    cursor: pointer;
+}
+
 .budget-dashboard #expense .input .add-expense img{
     width: 40px;
     height: 40px;
@@ -252,7 +278,7 @@ input[type=number] {
 }
 
 .budget-dashboard #expense ul{
-    width: 360px;
+    width: 600px;
     height: 285px;
     list-style: none;
     margin: 0;
@@ -305,7 +331,7 @@ input[type=number] {
 }
 
 .budget-dashboard #income{
-    width: 360px;
+    width: 600px;
     height: 339px;
     position: relative;
 }
@@ -313,7 +339,7 @@ input[type=number] {
 .budget-dashboard #income .input{
     position: absolute;
     display: block;
-    width: 360px;
+    width: 600px;
     bottom: 0;
     border-top: 1px solid #ccc;
 }
@@ -325,7 +351,7 @@ input[type=number] {
 
 .budget-dashboard #income .input input#income-title-input{
     height: 40px;
-    width : 150px;
+    width : 400px;
     padding-left: 10px;
     font-size: 1.2em;
     font-family: 'Gilroy';
@@ -354,7 +380,7 @@ input[type=number] {
 }
 
 .budget-dashboard #income ul{
-    width: 360px;
+    width: 600px;
     height: 285px;
     list-style: none;
     margin: 0;
@@ -405,15 +431,18 @@ input[type=number] {
     background-repeat: no-repeat;
 }
 
-@font-face {
-    font-family: 'Gilroy';
-    src: url('font/Gilroy-Regular.woff') format('woff');
-    font-weight: bold;
-    font-style: normal;
-}
-@font-face {
-    font-family: 'Gilroy Bold';
-    src: url('font/Gilroy-Bold.woff') format('woff');
-    font-weight: bold;
-    font-style: normal;
+.save-button{
+    transform: translateX(230px);
+    position:absolute;
+    cursor: pointer;
+    background-color: black;
+    border-radius: 20px;
+    border: none;
+    color: aliceblue;
+    max-width: fit-content;
+    max-width: -moz-fit-content;
+    padding: 5px 10px;
+    font-weight: normal;
+    text-decoration: none;
+    font-size: var(--main-font-size);
 }

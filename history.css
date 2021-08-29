@@ -1,0 +1,15 @@
+.save_button{
+    cursor: pointer;
+    display: inline-block;
+    vertical-align: middle;
+    background-color: black;
+    border-radius: 20px;
+    border: none;
+    color: aliceblue;
+    max-width: fit-content;
+    max-width: -moz-fit-content;
+    padding: 5px 10px;
+    font-weight: normal;
+    text-decoration: none;
+    font-size: var(--main-font-size);
+}
