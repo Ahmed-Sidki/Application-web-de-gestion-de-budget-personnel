@@ -8,8 +8,27 @@
     <link rel="stylesheet" href="history.css">
 </head>
 <body>
-    <div class="budget-container">
-        <button class="save_button">Save</button>
-        <a class="save-button" href="index.html">Back to budget</a>
+    <div class="container">
+        <button class="save_button">save</button>
+        <a class="save-button" href="code.html">back to budget</a>
     </div>
+    <div class = "Validation inactive" >
+        <p>Warning !!!</p>
+        <p>are you sure you want to save this month's data</p>
+        <button type="submit" class="yes_button save-button">
+          YES
+        </button>
+        <button class="no_button save-button">NO</button>
+    </div>
+    <div class="total_month opacity">
+        <ul class = "list2"></ul> 
+    </div>
+    <div class="container2 inactive">
+        <a class="back-button" href="code.html">back to budget</a>
+        <ul class = "list_months"></ul> 
+    </div>
+    <div class="chart_month opacity">
+        <canvas id="canvas"></canvas>
+    </div>
+    <script src="history.js"></script>
 </body>

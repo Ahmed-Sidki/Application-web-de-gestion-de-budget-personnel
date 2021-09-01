@@ -21,7 +21,7 @@ let ENTRY_LIST = [];
 let balance = 0, income = 0, outcome = 0;
 const DELETE = "delete", EDIT = "edit";
 
-ENTRY_LIST = JSON.parse(localStorage.getItem("entry_list")) || [];
+
 updateUI();
 
 expenseBtn.addEventListener("click", function(){
